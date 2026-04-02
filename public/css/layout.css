@@ -1,0 +1,84 @@
+/* Header */
+.header { background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+.header-top { background: var(--light-gray); font-size: 13px; padding: 6px 0; border-bottom: 1px solid var(--border); }
+.header-main { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.logo { font-size: 22px; font-weight: 700; color: var(--dark); }
+.nav { display: flex; gap: 20px; }
+.nav a { font-weight: 500; color: var(--dark); }
+.nav a:hover { color: var(--primary); }
+.header-actions { display: flex; gap: 10px; }
+.mobile-toggle { display: none; font-size: 20px; }
+
+/* Hero */
+.hero { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://placehold.co/1920x600/2C3E50/white?text=Cozy+Real+Estate') center/cover; min-height: 450px; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 40px 16px; }
+.hero h1 { font-size: 36px; margin-bottom: 12px; }
+.hero p { font-size: 18px; margin-bottom: 30px; opacity: 0.9; }
+.search-box { background: white; padding: 20px; border-radius: var(--radius); box-shadow: 0 8px 24px rgba(0,0,0,0.2); max-width: 900px; margin: 0 auto; }
+.search-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.search-submit { grid-column: 1 / -1; }
+
+/* Footer */
+.footer { background: var(--dark); color: white; padding: 40px 0 20px; margin-top: 40px; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-bottom: 24px; }
+.footer h3 { font-size: 18px; margin-bottom: 12px; }
+.footer a { display: block; padding: 4px 0; color: #B0BEC5; }
+.footer a:hover { color: white; }
+.footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 13px; color: #95A5A6; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav { display: none; position: absolute; top: 64px; left: 0; right: 0; background: white; flex-direction: column; padding: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .nav.active { display: flex; }
+    .mobile-toggle { display: block; }
+    .hero h1 { font-size: 26px; }
+    .search-grid { grid-template-columns: 1fr; }
+}
+/* ===== FIX DROPDOWN & SEARCH FORM ===== */
+.search-box {
+    position: relative;
+    z-index: 10;
+}
+
+.form-control:focus {
+    position: relative;
+    z-index: 11;
+}
+
+select.form-control option {
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* Fix giá tiền dài */
+.card-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 4px;
+    word-wrap: break-word;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+    
+    .search-box {
+        padding: 16px;
+    }
+    
+    .property-grid {
+        grid-template-columns: 1fr;
+    }
+}
+    /* Fix dropdown text color */
+.search-box select option {
+    color: #2C3E50;
+    background: white;
+    }

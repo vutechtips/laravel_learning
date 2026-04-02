@@ -1,0 +1,12 @@
+:root {
+    --primary: #E74C3C;
+    --primary-hover: #C0392B;
+    --dark: #2C3E50;
+    --gray: #7F8C8D;
+    --light-gray: #F8F9FA;
+    --white: #FFFFFF;
+    --border: #E5E7EB;
+    --shadow: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --font: 'Segoe UI', system-ui, sans-serif;
+}
